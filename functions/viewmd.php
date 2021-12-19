@@ -1,12 +1,12 @@
 <?php
-	//载入文件
+	// 载入文件
 	if ( $config['thedir'] == '' ){
 		include_once(__DIR__."/Parsedown.php");
 	}
 	else{
-		include_once($config['thedir']."/zdir/functions/Parsedown.php");
+		include_once($config['thedir']."/functions/Parsedown.php");
 	}
-	//exit;
+	// exit;
 	$Parsedown = new Parsedown();
 	@$file = $_GET['file'];
 
@@ -49,9 +49,9 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 	<script>
 		$(document).ready(function(){
-			//获取第一个H1作为标题
+			// 获取第一个H1作为标题
 			var h1 = $("h1").text();
-			//如果获取到了H1
+			// 如果获取到了H1
 			if(h1) {
 				$("title").text(h1 + " - MDtoHTML");
 			}

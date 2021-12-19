@@ -1,11 +1,11 @@
 <?php
-	//$thedir = __DIR__;
-	//$thedir = str_replace("\\","/",$thedir);
+	// $thedir = __DIR__;
+	// $thedir = str_replace("\\","/",$thedir);
 	
-	//$thedir = str_replace("/functions","",$thedir);
-	//当前站点的运行目录
+	// $thedir = str_replace("/functions","",$thedir);
+	// 当前站点的运行目录
 	$thedir = $_SERVER['DOCUMENT_ROOT'];
-	//echo $_SERVER['DOCUMENT_ROOT'];
+	// echo $_SERVER['DOCUMENT_ROOT'];
 	$html = file_get_contents("./functions/caches/indexes.html");
 
 	$s = @$_GET['s'];
@@ -20,10 +20,9 @@
 	foreach( $arr as $value )
 	{
 		if((stripos($value,$s)) || (stripos($value,$s) === 0)){
-			//echo $value.'--';
 			$value = trim($value);
-			//$value = strtolower($value);
-			//如果值带有.，说明是一个文件
+			// $value = strtolower($value);
+			// 如果值带有.，说明是一个文件
 			if(strpos($value,'.')){
 				array_push($txt,$value);
 			}
@@ -32,7 +31,7 @@
 	$s = con_coding($s);
 ?>
 <?php
-	//载入页头
+	// 载入页头
 	include_once("./template/header.php")
 ?>
     <!--面包屑导航-->
@@ -69,10 +68,10 @@
 					  <tbody>
 						<?php foreach( $txt as $name )
 						{
-							//获取文件修改时间
+							// 获取文件修改时间
 						    $ctime = filemtime($thedir.$name);
 						    $ctime = date("Y-m-d H:i",$ctime);
-						    //获取文件大小
+						    // 获取文件大小
 						    $fsize = filesize($thedir.$name);
 						    $fsize = ceil ($fsize / 1024);
 						    if($fsize >= 1024) {

@@ -1,5 +1,5 @@
 .header{
-	background-color:#393D49;
+	background-color:#100903;
     width:100%;
 }
 
@@ -83,7 +83,7 @@
 	    position:fixed;
 	    left:0;
 		bottom:0;
-		background: #2F4056;
+		background: #100903;
 		color:#E1E1E1;
 		padding:14px;
 	}
@@ -101,7 +101,7 @@
 	    /*position:fixed;*/
 	    left:0;
 		bottom:0;
-		background: #2F4056;
+		background: #100903;
 		color:#E1E1E1;
 		padding:14px;
 	}

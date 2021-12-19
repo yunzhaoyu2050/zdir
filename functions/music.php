@@ -1,12 +1,12 @@
 <?php
-	//获取视频播放地址
+	// 获取视频播放地址
 	@$url = $_GET['url'];
 	$url = con_coding($url,FALSE);
 	if( $config['thedir'] != '' ){
 		$url = str_replace("./","../",$url);
 	}
 	
-	//判断文件是否存在
+	// 判断文件是否存在
 	if(!file_exists($url)){
 		echo '音频文件不存在！';
 		exit;
@@ -39,7 +39,7 @@
 	<?php
 	}
 	?>
-  	</video>-->
+	</video>-->
 	<script src = "./static/aplayer/APlayer.min.js"></script>
 	<script type="text/javascript">
 		const ap = new APlayer({

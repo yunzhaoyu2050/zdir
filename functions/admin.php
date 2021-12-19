@@ -1,10 +1,10 @@
 <?php
-//防止上传超时
+// 防止上传超时
 ini_set('max_execution_time', '600');
-//载入配置文件
+// 载入配置文件
 include_once("../config.php");
-//需要读取的目录
-if( $config['thedir'] != '' ){
+// 需要读取的目录
+if ( $config['thedir'] != '' ) {
 	$base_dir = $config['thedir'];
 }
 else{
@@ -12,23 +12,20 @@ else{
 }
 
 $zdir_config = $config;
-//Default Configuration
-//$CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false}';
+// Default Configuration
+// $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false}';
 $CONFIG = '{"lang":"zh-CN","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false}';
 /**
  * H3K | Tiny File Manager V2.4.1
  * CCP Programmers | ccpprogrammers@gmail.com
  * https://tinyfilemanager.github.io
  */
-
-//TFM version
+// TFM version
 define('VERSION', '2.4.1');
 
-//Application Title
+// Application Title
 define('APP_TITLE', '文件管理器');
-
 // --- EDIT BELOW CONFIGURATION CAREFULLY ---
-
 
 // Auth with login/password 
 // set true/false to enable/disable it
@@ -163,7 +160,7 @@ $hide_Cols = isset($cfg->data['hide_Cols']) ? $cfg->data['hide_Cols'] : true;
 // Show Dirsize: true or speedup output: false
 $calc_folder = isset($cfg->data['calc_folder']) ? $cfg->data['calc_folder'] : true;
 
-//available languages
+// available languages
 $lang_list = array(
     'en' => 'English'
 );
@@ -256,7 +253,6 @@ if($ip_ruleset != 'OFF'){
             fm_show_header_login();
             fm_show_message();
         }
-
         exit();
     }
 }
@@ -295,7 +291,7 @@ if ($use_auth) {
                                 <form class="form-signin" action="" method="post" autocomplete="off">
                                     <div class="form-group">
                                        <div class="brand">
-                                            <h1>Zdir</h1>
+                                            <h1>KeySi</h1>
                                         </div>
                                         <div class="text-center">
                                             <h1 class="card-title"><?php echo APP_TITLE; ?></h1>
@@ -487,7 +483,7 @@ if (isset($_POST['ajax']) && !FM_READONLY) {
         echo $res;
     }
 
-    //upload using url
+    // upload using url
     if(isset($_POST['type']) && $_POST['type'] == "upload" && !empty($_REQUEST["uploadurl"])) {
         $path = FM_ROOT_PATH;
         if (FM_PATH != '') {
@@ -3345,7 +3341,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
         table.dataTable thead .sorting_desc { cursor:pointer;background-repeat:no-repeat;background-position:center right;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAZUlEQVQ4y2NgGAWjYBSggaqGu5FA/BOIv2PBIPFEUgxjB+IdQPwfC94HxLykus4GiD+hGfQOiB3J8SojEE9EM2wuSJzcsFMG4ttQgx4DsRalkZENxL+AuJQaMcsGxBOAmGvopk8AVz1sLZgg0bsAAAAASUVORK5CYII='); }
         table.dataTable thead tr:first-child th.custom-checkbox-header:first-child { background-image:none; }
         .footer-action li { margin-bottom:10px; }
-        .app-v-title { font-size:24px;font-weight:300;letter-spacing:-.5px;text-transform:uppercase; }
+        .app-v-title { font-size:24px;当前位置:300;letter-spacing:-.5px;text-transform:uppercase; }
         hr.custom-hr { border-top:1px dashed #8c8b8b;border-bottom:1px dashed #fff; }
         .ekko-lightbox .modal-dialog { max-width:98%; }
         .ekko-lightbox-item.fade.in.show .row { background:#fff; }

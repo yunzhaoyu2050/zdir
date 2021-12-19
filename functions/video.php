@@ -1,12 +1,12 @@
 <?php
-	//获取视频播放地址
+	// 获取视频播放地址
 	@$url = $_GET['url'];
 	$url = con_coding($url,FALSE);
 	if( $config['thedir'] != '' ){
 		$url = str_replace("./","../",$url);
 	}
 	
-	//判断文件是否存在
+	// 判断文件是否存在
 	if(!file_exists($url)){
 		echo '视频文件不存在！';
 		exit;
